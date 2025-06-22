@@ -65,14 +65,14 @@
                 raise_layer {
                         bindings = <
 // ┌─────────────┬──────────────┬──────────────┬──────────────┬─────────────┬─────────────┐        ┌─────────────┬─────────────┬──────────────┬──────────────┬─────────────┬────────────┐
-// |    ESC      |              |              |              |             |             |        |             |             |              |              |             |   BSPC ⌫   |
-       &kp ESC        &trans         &trans         &trans        &trans        &trans                 &trans        &trans         &trans         &trans        &trans        &kp BSPC
+// |    ESC      |              |              |              |    BT 1     |    BT 2     |        |             |             |              |              |             |   BSPC ⌫   |
+       &kp ESC        &trans         &trans         &trans     &bt BT_SEL 0  &bt BT_SEL 1             &trans        &trans         &trans         &trans        &trans        &kp BSPC
 // ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
-// |  CTRL (⌃)   |              |              |              |             |             |        |      ←      |      ↓      |       ↑      |      →       |             |            |
-      &kp LCTRL       &trans         &trans         &trans        &trans        &trans                &kp LEFT      &kp DOWN        &kp UP       &kp RIGHT       &trans        &trans
+// |             |              |              |              |             |             |        |      ←      |      ↓      |       ↑      |      →       |             |            |
+       &trans         &trans         &trans         &trans        &trans        &trans                &kp LEFT      &kp DOWN        &kp UP       &kp RIGHT       &trans        &trans
 // ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
-// |    SHFT     |      BT1     |    BT2       |     BT3      |             |             |        |             |             |              |              |             |            |
-      &kp LSHFT    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2     &trans        &trans                 &trans        &trans        &trans          &trans        &trans        &trans
+// |    SHFT     |   CTRL (^)   |   OPT (⌥)    |              |             |             |        |             |             |              |              |             |            |
+      &kp LSHFT      &kp LCTRL      &kp LALT        &trans        &trans        &trans                 &trans        &trans        &trans          &trans        &trans        &trans
 // └─────────────┴──────────────┴──────────────┼──────────────┬─────────────┬─────────────┤        ├─────────────┬─────────────┬──────────────┬──────────────┴─────────────┴────────────┘
 //                                             |   GUI (⌘)    |             |     SPC     |        |      ENT    |#############|    OPT (⌥)   |
                                                    &kp LGUI       &trans       &kp SPACE                &kp RET      &trans        &kp RALT
