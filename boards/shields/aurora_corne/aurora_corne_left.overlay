@@ -1,0 +1,5 @@
+// aurora_corne_left.overlay
+
+#include "../../aurora_corne.dtsi"
+
+// Add any left-specific hardware or kscan definitions here
